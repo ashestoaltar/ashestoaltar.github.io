@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ashes to Altar</title>
+  <meta name="description" content="From ashes to renewal — essays, studies, and reflections exploring Scripture, restoration, and hope." />
+  <meta property="og:title" content="Ashes to Altar" />
+  <meta property="og:description" content="From ashes to renewal — essays, studies, and reflections exploring Scripture, restoration, and hope." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashestoaltar.com" />
+  <style>
+    :root{
+      --bg:#1c1c1c; --text:#f2f2f2; --muted:#b8b8b8; --accent:#d89a50;
+    }
+    html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px 20px;}
+    .card{max-width:720px;width:100%;text-align:center}
+    .logo{width:120px;height:120px;border-radius:16px;margin:0 auto 20px;display:block;object-fit:cover;box-shadow:0 6px 30px rgba(0,0,0,.35)}
+    h1{font-weight:700;letter-spacing:.3px;margin:0 0 6px}
+    p{margin:6px 0 22px;color:var(--muted);line-height:1.6}
+    .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    .btn{padding:12px 18px;border-radius:999px;border:1px solid #3a3a3a;text-decoration:none;color:var(--text);transition:.2s ease;display:inline-block}
+    .btn:hover{transform:translateY(-1px);border-color:#555}
+    .btn.accent{background:var(--accent);color:#1c1c1c;border-color:var(--accent);font-weight:700}
+    footer{margin-top:28px;font-size:13px;color:#9a9a9a}
+    a.mail{color:var(--accent);text-decoration:none}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <!-- Replace with your flame image path or remove the <img> line -->
+      <img class="logo" src="flame.png" alt="Ashes to Altar emblem" />
+      <h1>Ashes to Altar</h1>
+      <p>From ashes we rise. At the altar we are remade.<br/>Essays, studies, and reflections exploring Scripture, restoration, and hope.</p>
+      <div class="btns">
+        <a class="btn accent" href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener">Read on Medium</a>
+        <a class="btn" href="https://youtube.com/@AshestoAltar" target="_blank" rel="noopener">Watch on YouTube</a>
+        <a class="btn" href="https://x.com/GutterSwan" target="_blank" rel="noopener">Follow on X</a>
+        <a class="btn" href="mailto:contact@ashestoaltar.com">Contact</a>
+      </div>
+      <footer>© <span id="y"></span> Ashes to Altar</footer>
+    </section>
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
