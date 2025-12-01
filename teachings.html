@@ -76,8 +76,7 @@
         <div class="btns">
           <a class="btn accent" href="#foundations">Start with Foundations</a>
           <a class="btn" href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener">
-            Latest on Medium
-          </a>
+            Latest on Medium</a>
         </div>
       </section>
 
@@ -136,6 +135,26 @@
             </p>
             <p class="teaching-meta">Planned · Part of Foundations series</p>
           </div>
+        </div>
+      </section>
+
+      <!-- LATEST ON MEDIUM (AUTO-LOADED) -->
+      <section class="teachings-section" id="latest-medium">
+        <header class="teachings-section-header">
+          <h2>Latest on Medium</h2>
+          <p>
+            Newest long-form teachings posted on Medium – automatically pulled in as they go live.
+          </p>
+        </header>
+
+        <div id="medium-posts" class="teachings-grid">
+          <!-- Medium posts will be injected here by JavaScript -->
+        </div>
+
+        <div class="btns" style="margin-top: 1.5rem;">
+          <a class="btn accent" href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener">
+            View all on Medium
+          </a>
         </div>
       </section>
 
@@ -354,5 +373,68 @@
       </section>
     </article>
   </main>
+
+  <!-- Medium auto-pull script -->
+  <script>
+    async function loadMediumPosts() {
+      const container = document.getElementById("medium-posts");
+      if (!container) return;
+
+      const rssUrl = "https://medium.com/feed/@ashestoaltar";
+      const apiUrl =
+        "https://api.rss2json.com/v1/api.json?rss_url=" +
+        encodeURIComponent(rssUrl);
+
+      try {
+        const res = await fetch(apiUrl);
+        if (!res.ok) throw new Error("Network response was not ok");
+        const data = await res.json();
+
+        if (!data.items || !data.items.length) {
+          container.innerHTML =
+            '<p class="body-text">No Medium posts found yet. Check back soon.</p>';
+          return;
+        }
+
+        const posts = data.items.slice(0, 6);
+
+        posts.forEach((item) => {
+          const div = document.createElement("div");
+          div.className = "teaching-card medium-card";
+
+          const raw = item.description || "";
+          const textOnly = raw.replace(/<[^>]+>/g, "");
+          const snippet =
+            textOnly.length > 180 ? textOnly.slice(0, 180).trim() + "…" : textOnly;
+
+          const date = new Date(item.pubDate);
+          const dateStr = date.toLocaleDateString(undefined, {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+
+          div.innerHTML = `
+            <div class="teaching-meta">Medium · ${dateStr}</div>
+            <h3>${item.title}</h3>
+            <p>${snippet}</p>
+            <p class="teaching-meta">
+              <a class="inline-link" href="${item.link}" target="_blank" rel="noopener">
+                Read on Medium
+              </a>
+            </p>
+          `;
+
+          container.appendChild(div);
+        });
+      } catch (err) {
+        console.error("Failed to load Medium posts:", err);
+        container.innerHTML =
+          '<p class="body-text">Unable to load Medium posts right now. You can still read them directly on <a class="inline-link" href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener">Medium</a>.</p>';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadMediumPosts);
+  </script>
 </body>
 </html>
