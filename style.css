@@ -457,3 +457,16 @@ footer a {
     justify-content: center;
   }
 }
+
+/* --- Teachings header cleanup --- */
+
+/* Make sure the teachings page uses the same light background everywhere */
+.teachings-section-header {
+  background: transparent;        /* remove any dark bar */
+}
+
+/* Extra safety: if any generic .section-header rules exist elsewhere,
+   force them to be transparent on the teachings page too */
+.page .teachings-section-header {
+  background-color: transparent;
+}
