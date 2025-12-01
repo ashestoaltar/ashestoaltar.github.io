@@ -470,3 +470,19 @@ footer a {
 .page .teachings-section-header {
   background-color: transparent;
 }
+
+/* --- CLEAN FIX FOR DARK BARS ON TEACHINGS PAGE --- */
+
+.teachings-section-header,
+.teachings-section-header *,
+.section-header,
+.section-header * {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove any unintended dark strips around sections */
+.teachings-section {
+  background: transparent !important;
+}
