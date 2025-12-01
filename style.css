@@ -35,8 +35,9 @@ main {
 }
 
 /* Top nav bar (used on all pages) */
+/* IMPORTANT: only style the top-level header, not inner <header> tags */
 
-header {
+body > header {
   width: 100%;
   padding: 14px 24px;
   background: rgba(30, 26, 23, 0.92);
@@ -420,7 +421,7 @@ footer a {
 /* Responsive */
 
 @media (max-width: 640px) {
-  header {
+  body > header {
     padding: 10px 14px;
   }
 
@@ -456,33 +457,4 @@ footer a {
     width: 100%;
     justify-content: center;
   }
-}
-
-/* --- Teachings header cleanup --- */
-
-/* Make sure the teachings page uses the same light background everywhere */
-.teachings-section-header {
-  background: transparent;        /* remove any dark bar */
-}
-
-/* Extra safety: if any generic .section-header rules exist elsewhere,
-   force them to be transparent on the teachings page too */
-.page .teachings-section-header {
-  background-color: transparent;
-}
-
-/* --- CLEAN FIX FOR DARK BARS ON TEACHINGS PAGE --- */
-
-.teachings-section-header,
-.teachings-section-header *,
-.section-header,
-.section-header * {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* Remove any unintended dark strips around sections */
-.teachings-section {
-  background: transparent !important;
 }
