@@ -1,72 +1,427 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Teachings – Ashes to Altar</title>
+  <meta charset="UTF-8" />
+  <title>Teachings | Ashes to Altar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Bible studies, essays, and series from Ashes to Altar – exploring Scripture, faith, and restoration." />
-  <link rel="canonical" href="https://ashestoaltar.com/teachings.html" />
-  <link rel="icon" type="image/png" href="flame.png" />
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="teachings.css" />
+  <!-- If you have a global stylesheet, include it above or below this line -->
 </head>
 <body>
-  <header>
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <img src="flame.png" alt="Ashes to Altar emblem" />
-        <span>Ashes to Altar</span>
+  <div class="teachings-page">
+
+    <!-- PAGE HEADER -->
+    <header class="teachings-header">
+      <div class="teachings-header-inner">
+        <h1 class="teachings-title">Teachings</h1>
+        <p class="teachings-subtitle">
+          Faithful reading. Biblical context. Covenant foundations.
+        </p>
+
+        <!-- Optional tag nav -->
+        <nav class="teachings-tag-nav">
+          <button class="tag-pill tag-pill-active">All</button>
+          <button class="tag-pill">Beginner</button>
+          <button class="tag-pill">Foundations</button>
+          <button class="tag-pill">Feasts</button>
+          <button class="tag-pill">Textual Issues</button>
+          <button class="tag-pill">History</button>
+        </nav>
       </div>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/teachings.html">Teachings</a>
-        <a href="/privacy.html">Privacy</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="page-wrap">
-    <article class="page">
-      <h1>Teachings</h1>
-      <p>
-        A growing collection of studies, essays, and resources. Many of these begin as notes for
-        conversations or teaching sessions and are gradually refined into written form.
-      </p>
+    <main class="teachings-main">
 
-      <section class="teaching-list">
-        <div class="teaching-card">
-          <div class="teaching-meta">Genesis 22 · Article</div>
-          <h2>
-            <a href="/posts/genesis-22-faithful-reading.html">A Faithful Reading of the Binding of Isaac</a>
-          </h2>
-          <p class="teaching-desc">
-            Wrestling with the Akedah without flattening its tension – and asking what it reveals
-            about obedience, mercy, and the God who provides.
+      <!-- SECTION: FOUNDATIONS HERO TRACK -->
+      <section class="section section-foundations">
+        <div class="section-header">
+          <h2>Start Here &mdash; Foundations Series</h2>
+          <p class="section-description">
+            A guided path for new believers and those hungry to move beyond surface-level Christianity.
           </p>
         </div>
 
-        <div class="teaching-card">
-          <div class="teaching-meta">Malachi 4 · Article</div>
-          <h2>
-            <a href="/posts/elijah-turning-hearts.html">Elijah and the Turning of Hearts</a>
-          </h2>
-          <p class="teaching-desc">
-            If Elijah is sent to turn hearts back and remember the law of Moses, what does that mean
-            for the people of God now?
-          </p>
-        </div>
+        <article class="foundations-hero-card">
+          <div class="foundations-hero-text">
+            <h3 class="foundations-title">Foundations Series (Beginner Path)</h3>
+            <p class="foundations-description">
+              Who the Bible is for, what it actually is, and how covenant, kingdom, Israel, and Messiah all fit together.
+              Designed as a step-by-step journey for those starting fresh or rebuilding from the ground up.
+            </p>
 
-        <!-- Add more teachings here as you publish them -->
+            <ul class="foundations-lessons">
+              <li>Lesson 1 &mdash; What the Bible Actually Is</li>
+              <li>Lesson 2 &mdash; Covenant &amp; Kingdom</li>
+              <li>Lesson 3 &mdash; Who Israel Actually Is</li>
+              <li>Lesson 4 &mdash; Why the Law Still Matters</li>
+              <li>Lesson 5 &mdash; Messiah in Context</li>
+            </ul>
+
+            <a href="#"
+               class="button button-primary">
+              Start the Series
+            </a>
+          </div>
+          <div class="foundations-hero-visual">
+            <!-- Placeholder graphic area (can swap with real image later) -->
+            <div class="hero-visual-placeholder">
+              <span class="hero-visual-label">
+                Foundations Pathway
+              </span>
+              <div class="hero-visual-lines">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
-    </article>
-  </main>
 
-  <footer>
-    © <span id="year"></span> Ashes to Altar · From the ruin we rise
-  </footer>
+      <!-- SECTION: LATEST FROM MEDIUM (AUTO / PLACEHOLDER) -->
+      <section class="section section-latest">
+        <div class="section-header">
+          <h2>Latest from Medium</h2>
+          <p class="section-description">
+            Fresh articles as they’re published. These will later be auto-fetched from your Medium feed.
+          </p>
+        </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+        <div class="cards-grid cards-grid-3">
+          <!-- Example cards (static for now, can be replaced with JS that reads RSS) -->
+          <article class="card medium-card">
+            <div class="card-body">
+              <span class="card-tag">Medium</span>
+              <h3 class="card-title">[Sample] Why the Law Still Matters</h3>
+              <p class="card-excerpt">
+                A contextual look at covenant, grace, and why “done away with” doesn’t match the text.
+              </p>
+              <p class="card-meta">Medium &middot; 7 min read</p>
+              <a href="#" class="card-link">Read on Medium →</a>
+            </div>
+          </article>
+
+          <article class="card medium-card">
+            <div class="card-body">
+              <span class="card-tag">Medium</span>
+              <h3 class="card-title">[Sample] The Real History of Christmas</h3>
+              <p class="card-excerpt">
+                Scripture, papal strategy, and how December 25th became “the” day.
+              </p>
+              <p class="card-meta">Medium &middot; 10 min read</p>
+              <a href="#" class="card-link">Read on Medium →</a>
+            </div>
+          </article>
+
+          <article class="card medium-card">
+            <div class="card-body">
+              <span class="card-tag">Medium</span>
+              <h3 class="card-title">[Sample] Jesus Looks at the Heart</h3>
+              <p class="card-excerpt">
+                Not a free pass for compromise, but the promise of His law written within.
+              </p>
+              <p class="card-meta">Medium &middot; 8 min read</p>
+              <a href="#" class="card-link">Read on Medium →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRACK 1 — COVENANT & TORAH CONTEXT -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Covenant, Torah &amp; Kingdom Context</h2>
+          <p class="section-description">
+            For those who sense there’s more to discipleship than “just believe” and want to see the whole story.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Foundations</span>
+                <span class="card-tag">Beginner</span>
+              </div>
+              <h3 class="card-title">Why the Law Still Matters</h3>
+              <p class="card-excerpt">
+                A contextual look at the Sinai covenant, Jeremiah 31, and what it really means for the law to be written on our hearts.
+              </p>
+              <p class="card-meta">Article &middot; Beginner / Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Foundations</span>
+              </div>
+              <h3 class="card-title">What the Bible Actually Is</h3>
+              <p class="card-excerpt">
+                Not a random library of “devotional” snippets, but the covenant record of a King and His kingdom.
+              </p>
+              <p class="card-meta">Article / PDF &middot; Beginner</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Covenant</span>
+              </div>
+              <h3 class="card-title">Who Israel Actually Is</h3>
+              <p class="card-excerpt">
+                Untangling church tradition, replacement theology, and the Scriptural identity of Israel and the nations.
+              </p>
+              <p class="card-meta">Article &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRACK 2 — HISTORICAL & CULTURAL STUDIES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Historical &amp; Cultural Studies</h2>
+          <p class="section-description">
+            Holidays, history, and the cultural layers that shaped what most people call “Christianity” today.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">History</span>
+              </div>
+              <h3 class="card-title">The Real History of Christmas</h3>
+              <p class="card-excerpt">
+                Biblical timing of Messiah’s birth, papal replacement strategy, and why December 25th matters more than we think.
+              </p>
+              <p class="card-meta">Article &middot; Longform</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">History</span>
+                <span class="card-tag">America</span>
+              </div>
+              <h3 class="card-title">The Real Thanksgiving Story</h3>
+              <p class="card-excerpt">
+                Proclamations, fasting, gratitude, and how Scripture shaped early American thanksgiving observances.
+              </p>
+              <p class="card-meta">Article / PDF &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Feasts</span>
+              </div>
+              <h3 class="card-title">Hanukkah &amp; the Messiah</h3>
+              <p class="card-excerpt">
+                Warfare, rededication, and why Yeshua shows up at the Feast of Dedication in John 10.
+              </p>
+              <p class="card-meta">Article &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRACK 3 — TEXTUAL & TRANSLATION ISSUES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Textual &amp; Translation Issues</h2>
+          <p class="section-description">
+            For when a comma, a late verse, or a translation choice changes entire doctrines.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Textual</span>
+              </div>
+              <h3 class="card-title">Luke 23:43 &mdash; The Comma That Changed Everything</h3>
+              <p class="card-excerpt">
+                How punctuation, Greek word order, and theology collided at the cross with the thief.
+              </p>
+              <p class="card-meta">Article / Notes &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Textual</span>
+              </div>
+              <h3 class="card-title">The Comma Johanneum</h3>
+              <p class="card-excerpt">
+                How a much-loved Trinitarian verse entered, and then quietly exited, the text of 1 John.
+              </p>
+              <p class="card-meta">Article &middot; Advanced</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Textual</span>
+                <span class="card-tag">Paul</span>
+              </div>
+              <h3 class="card-title">“Under the Law” &mdash; What Paul Actually Means</h3>
+              <p class="card-excerpt">
+                Legalism, covenant status, and why Paul isn’t doing away with obedience.
+              </p>
+              <p class="card-meta">Article &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRACK 4 — FEASTS & APPOINTED TIMES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Feasts &amp; Appointed Times</h2>
+          <p class="section-description">
+            Sabbath, moedim, and how the calendar reveals the King’s plan.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Feasts</span>
+                <span class="card-tag">Beginner</span>
+              </div>
+              <h3 class="card-title">Sabbath in Scripture</h3>
+              <p class="card-excerpt">
+                Creation, Sinai, Messiah, and the Kingdom &mdash; one day woven through all of redemptive history.
+              </p>
+              <p class="card-meta">Article &middot; Beginner</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Feasts</span>
+              </div>
+              <h3 class="card-title">Passover: Exodus &amp; the Lamb</h3>
+              <p class="card-excerpt">
+                From Egypt to the Upper Room, how Messiah fulfills the Passover pattern.
+              </p>
+              <p class="card-meta">Article / Notes &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Feasts</span>
+              </div>
+              <h3 class="card-title">Sukkot: Dwelling with God</h3>
+              <p class="card-excerpt">
+                Temporary shelters, future glory, and what it means for God to dwell among His people.
+              </p>
+              <p class="card-meta">Article &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TRACK 5 — HARD SAYINGS -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Hard Sayings &amp; Misunderstood Passages</h2>
+          <p class="section-description">
+            Passages that have been weaponized, softened, or simply ignored.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Hard Saying</span>
+              </div>
+              <h3 class="card-title">Did God Command Human Sacrifice? (Genesis 22)</h3>
+              <p class="card-excerpt">
+                The binding of Isaac, pagan context, and what the test actually reveals.
+              </p>
+              <p class="card-meta">Article / Notes &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Hard Saying</span>
+              </div>
+              <h3 class="card-title">“Depart from Me, I Never Knew You”</h3>
+              <p class="card-excerpt">
+                Identity, lawlessness, and why this is one of the most sobering lines Messiah spoke.
+              </p>
+              <p class="card-meta">Article &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="card-tag">Hard Saying</span>
+              </div>
+              <h3 class="card-title">What Does “Fulfilled the Law” Actually Mean?</h3>
+              <p class="card-excerpt">
+                From Matthew 5 to the prophets, how “fulfill” is used and what it definitely does not mean.
+              </p>
+              <p class="card-meta">Article &middot; Intermediate</p>
+              <a href="#" class="card-link">View teaching →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER CTA -->
+    <footer class="teachings-footer">
+      <div class="teachings-footer-inner">
+        <h3>Stay in the loop</h3>
+        <p>
+          Want to hear when new teachings, series, or resources go live? Follow on Medium or subscribe for updates.
+        </p>
+        <div class="footer-actions">
+          <a href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener" class="button button-secondary">
+            Follow on Medium
+          </a>
+          <!-- Optional: link to email list / contact page -->
+          <a href="/contact" class="button button-ghost">
+            Contact / Questions
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
