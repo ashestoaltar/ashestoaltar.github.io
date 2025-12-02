@@ -515,3 +515,21 @@ footer a {
   margin: 0 0 8px;
 }
 
+/* Responsive adjustments for Foundations grid */
+@media (max-width: 1024px) {
+  .teaching-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .teaching-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #foundations {
+    padding: 16px 0;
+  }
+}
+
+
