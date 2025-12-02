@@ -458,3 +458,60 @@ footer a {
     justify-content: center;
   }
 }
+
+/* Foundations section layout */
+#foundations {
+  margin: 40px 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#foundations h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+#foundations .section-intro {
+  max-width: 720px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #cbb8a1;
+  margin-bottom: 24px;
+}
+
+/* Teaching grid */
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Teaching card */
+.teaching-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.teaching-card .meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8d7455;
+  margin-bottom: 6px;
+}
+
+.teaching-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+.teaching-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 8px;
+}
+
