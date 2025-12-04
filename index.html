@@ -6,95 +6,204 @@
 
   <!-- Basic SEO -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ashes to Altar – exploring Scripture, faith, and restoration. From the ruin we rise." />
+  <meta
+    name="description"
+    content="Ashes to Altar is a quiet corner for those wrestling with Scripture, faith, and the long work of restoration."
+  />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://ashestoaltar.com/" />
 
-  <!-- Favicon & Logo (optional; uses files in repo root) -->
+  <!-- Favicon & Logo -->
   <link rel="icon" type="image/png" href="flame.png" />
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ashes to Altar" />
-  <meta property="og:description" content="From the ruin we rise – essays, studies, and reflections exploring Scripture, faith, and restoration." />
+  <meta property="og:title" content="Ashes to Altar – From the ruin we rise" />
+  <meta
+    property="og:description"
+    content="Essays, studies, and creative projects tracing the patterns of covenant, mercy, and renewal from Genesis onward."
+  />
   <meta property="og:url" content="https://ashestoaltar.com/" />
-  <meta property="og:image" content="https://ashestoaltar.com/banner.jpg" />
+  <meta property="og:image" content="og-image.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ashes to Altar" />
-  <meta name="twitter:description" content="From the ruin we rise – essays, studies, and reflections exploring Scripture, faith, and restoration." />
-  <meta name="twitter:image" content="https://ashestoaltar.com/banner.jpg" />
-  
-  <!-- Shared styles -->
-  <link rel="stylesheet" href="/style.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="nav-inner">
-      <div class="nav-brand">
-        <img src="flame.png" alt="Ashes to Altar emblem" />
-        <span>Ashes to Altar</span>
-      </div>
-      <nav>
-  <a href="/">Home</a>
-  <a href="/about.html">About</a>
-  <a href="/teachings.html">Teachings</a>
-  <a href="/privacy.html">Privacy</a>
-</nav>
-
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="index.html">
+        <img src="flame.png" alt="Ashes to Altar flame logo" class="brand-logo" />
+        <span class="brand-name">Ashes to Altar</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link is-active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="teachings.html" class="nav-link">Teachings</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+      </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="card">
-      <img class="logo" src="flame.png" alt="Ashes to Altar emblem" />
-      <h1>ASHES TO ALTAR</h1>
-      <p class="tagline">From the ruin we rise.</p>
+  <main class="site-main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <img
+          src="flame.png"
+          alt="Small altar flame"
+          class="hero-logo"
+        />
+        <h1 class="hero-title">ASHES TO ALTAR</h1>
+        <p class="hero-subtitle">FROM THE RUIN WE RISE.</p>
 
-      <p class="body-text">
-        Ashes to Altar is a quiet corner for those wrestling with Scripture, faith, and the long work of restoration.  
-        Here you’ll find essays, studies, and creative projects that trace the patterns of covenant, mercy, and renewal
-        from Genesis onward.
-      </p>
+        <p class="hero-body">
+          Ashes to Altar is a quiet corner for those wrestling with Scripture, faith,
+          and the long work of restoration. Here you’ll find essays, studies, and
+          creative projects that trace the patterns of covenant, mercy, and renewal
+          from Genesis onward.
+        </p>
 
-      <div class="btns">
+        <div class="hero-buttons">
+          <a
+            class="btn accent"
+            href="https://medium.com/@ashestoaltar"
+            target="_blank"
+            rel="noopener"
+          >
+            Read on Medium
+          </a>
+          <a
+            class="btn subtle"
+            href="#"
+            aria-disabled="true"
+          >
+            YouTube Channel (Coming Soon)
+          </a>
+          <a
+            class="btn subtle"
+            href="https://x.com/ashestoaltar"
+            target="_blank"
+            rel="noopener"
+          >
+            Follow on X
+          </a>
+          <a class="btn subtle" href="mailto:contact@ashestoaltar.com">
+            Contact
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Medium -->
-  <a class="btn accent" href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener">
-    Read on Medium
-  </a>
+    <!-- FEATURED TEACHING -->
+    <section class="section featured-teaching">
+      <div class="section-inner">
+        <p class="section-kicker">Featured Teaching</p>
+        <div class="featured-card">
+          <div class="featured-text">
+            <h2 class="section-title">
+              Provoking Israel to Jealousy: How Gentiles Keep Torah
+            </h2>
+            <p class="section-body">
+              Why Paul says Gentile believers are meant to stir Israel to holy jealousy—
+              not by replacing her, but by walking faithfully in the covenant God never
+              abandoned.
+            </p>
+            <div class="featured-meta">
+              <span>Medium · Theology / Torah · ~18 min read</span>
+            </div>
+            <a
+              class="btn accent"
+              href="https://medium.com/@ashestoaltar/your-featured-article-slug"
+              target="_blank"
+              rel="noopener"
+            >
+              Read This Teaching
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- YouTube -->
-  <a class="btn" href="https://youtube.com/@ashestoaltar" target="_blank" rel="noopener">
-    <svg aria-hidden="true" viewBox="0 0 24 24" class="btn-icon">
-      <path d="M21.6 7.2s-.2-1.4-.8-2c-.7-.8-1.6-.8-2-0.9C16.1 4 12 4 12 4h-.1s-4.1 0-6.8.3c-.4.1-1.3.1-2 0.9-.6.6-.8 2-.8 2S2 8.9 2 10.6v1.5c0 1.7.3 3.4.3 3.4s.2 1.4.8 2c.7.8 1.7.8 2.1.9 1.5.1 6.8.3 6.8.3s4.1 0 6.8-.3c.4-.1 1.3-.1 2-0.9.6-.6.8-2 .8-2s.3-1.7.3-3.4v-1.5c0-1.7-.3-3.4-.3-3.4zM10.3 9.3l4.6 2.7-4.6 2.7V9.3z"></path>
-    </svg>
-    YouTube Channel (Growing Soon)
-  </a>
+    <!-- START HERE -->
+    <section class="section start-here">
+      <div class="section-inner">
+        <h2 class="section-title">Start Here</h2>
+        <p class="section-body section-body-center">
+          Not sure where to begin? These paths will help you ease into the work
+          of faithful reading, Torah, and restoration.
+        </p>
 
-  <!-- X / Twitter -->
-  <a class="btn" href="https://x.com/GutterSwan" target="_blank" rel="noopener">
-    Follow on X
-  </a>
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <article class="info-card">
+            <h3 class="info-card-title">Foundations Series</h3>
+            <p class="info-card-body">
+              Learn how to read Scripture as one unified story, rooted in covenant and
+              the Kingdom—not chopped into proof-texts.
+            </p>
+            <a href="teachings.html#foundations" class="info-card-link">
+              Begin Foundations →
+            </a>
+          </article>
 
-  <!-- Email -->
-  <a class="btn" href="mailto:contact@ashestoaltar.com">
-    Contact
-  </a>
+          <!-- Card 2 -->
+          <article class="info-card">
+            <h3 class="info-card-title">Latest Teachings</h3>
+            <p class="info-card-body">
+              Long-form studies on Torah, the prophets, and the writings of the apostles,
+              with historical and Jewish context.
+            </p>
+            <a href="teachings.html" class="info-card-link">
+              Explore Teachings →
+            </a>
+          </article>
 
-</div>
+          <!-- Card 3 -->
+          <article class="info-card">
+            <h3 class="info-card-title">What We Believe</h3>
+            <p class="info-card-body">
+              A short overview of the convictions shaping Ashes to Altar: Torah for all
+              believers, restoration of Israel, and allegiance to Yeshua.
+            </p>
+            <a href="about.html#beliefs" class="info-card-link">
+              Read Our Approach →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- WHAT WE BELIEVE STRIP -->
+    <section class="section beliefs-strip">
+      <div class="section-inner">
+        <h2 class="section-title">What We Believe</h2>
+        <p class="section-body section-body-center">
+          Ashes to Altar is for those who sense there must be more than the version of
+          Christianity they’ve inherited.
+        </p>
+        <ul class="beliefs-list">
+          <li>Faithful reading of Scripture in its original context</li>
+          <li>Torah as the way of life for every disciple of Yeshua</li>
+          <li>Covenant patterns from Genesis to Revelation</li>
+          <li>The restoration of Israel and the nations—not replacement</li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <footer>
-    © <span id="year"></span> Ashes to Altar · From the ruin we rise
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p>© 2025 Ashes to Altar · From the ruin we rise.</p>
+      <p class="footer-links">
+        <a href="https://medium.com/@ashestoaltar" target="_blank" rel="noopener">Medium</a>
+        ·
+        <a href="https://x.com/ashestoaltar" target="_blank" rel="noopener">X</a>
+        ·
+        <a href="#" aria-disabled="true">YouTube (Coming Soon)</a>
+      </p>
+    </div>
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
