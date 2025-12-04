@@ -735,5 +735,40 @@ footer a {
   text-decoration: none;
 }
 
+/* === SECTION VISUAL BACKPLATES (helps readability) === */
+
+.section {
+  position: relative;
+  padding: 3rem 1rem;
+}
+
+.section::before {
+  /* subtle light halo */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 245, 225, 0.12),
+    rgba(255, 245, 225, 0.03)
+  );
+  filter: blur(24px);
+  z-index: -1;
+}
+
+/* Ensures card-grid spacing doesn’t “bleed” into gradient */
+.start-here .section-inner,
+.featured-teaching .section-inner,
+.beliefs-strip .section-inner {
+  position: relative;
+  background: rgba(0, 0, 0, 0.22); /* soft translucent layer */
+  padding: 2.2rem 1.8rem;
+  border-radius: 24px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.55);
+}
+
+
 
 
