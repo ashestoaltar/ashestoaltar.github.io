@@ -1,15 +1,21 @@
+/* =========================================================
+   ASHES TO ALTAR – GLOBAL THEME
+   ========================================================= */
+
+/* Theme variables */
 :root {
   --bg: #1e1a17;
   --bg-soft: #2a241f;
   --card: #f4e4c8;
-  --text: #27211a;
-  --muted: #6d5a45;
+  --text-dark: #27211a;
+  --text-muted: #6d5a45;
+  --text-light: #f8e6cc;
+  --text-light-soft: #e9dcc4;
   --accent: #c6923b;
   --accent-dark: #8b6224;
 }
 
-/* Global */
-
+/* Reset / global */
 * {
   box-sizing: border-box;
 }
@@ -20,7 +26,7 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica,
     Arial, sans-serif;
   background: radial-gradient(circle at top, #f7e5c5 0, #1e1a17 55%);
-  color: var(--text);
+  color: var(--text-dark);
   display: flex;
   flex-direction: column;
 }
@@ -34,8 +40,9 @@ main {
   flex: 1;
 }
 
-/* Top nav bar (used on all pages) */
-/* IMPORTANT: only style the top-level header, not inner <header> tags */
+/* =========================================================
+   TOP NAVIGATION (used on all pages)
+   ========================================================= */
 
 body > header {
   width: 100%;
@@ -84,7 +91,6 @@ nav {
 nav a {
   color: #e7dccf;
   opacity: 0.85;
-  text-decoration: none;
   position: relative;
   padding-bottom: 2px;
 }
@@ -108,7 +114,83 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* Homepage layout (index.html) */
+/* =========================================================
+   REUSABLE COMPONENTS
+   ========================================================= */
+
+/* Primary button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  background: #fdf7eb;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.08s ease,
+    box-shadow 0.12s ease;
+}
+
+.btn:hover {
+  background: #f3e1c0;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn.accent {
+  background: linear-gradient(135deg, #f7b14b, #c47a2a);
+  color: #26170b;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn.accent:hover {
+  background: linear-gradient(135deg, #ffca6b, #d08632);
+}
+
+/* Generic inline icon for buttons if needed */
+.btn-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+/* Meta line used on teaching pages */
+.meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8d7455;
+  margin-bottom: 14px;
+}
+
+/* Quotes & inline links */
+blockquote {
+  margin: 12px 0 16px;
+  padding-left: 14px;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: #4a3824;
+}
+
+.inline-link {
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* =========================================================
+   LEGACY HOMEPAGE CARD (still used on some pages)
+   ========================================================= */
 
 .wrap {
   max-width: 900px;
@@ -150,7 +232,7 @@ h1 {
   font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .body-text {
@@ -167,45 +249,9 @@ h1 {
   gap: 10px;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 13px;
-  border: 1px solid rgba(0, 0, 0, 0.16);
-  background: #fdf7eb;
-  cursor: pointer;
-  transition: background 0.12s ease, transform 0.08s ease,
-    box-shadow 0.12s ease;
-}
-
-.btn:hover {
-  background: #f3e1c0;
-  transform: translateY(-1px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-
-.btn.accent {
-  background: linear-gradient(135deg, #f7b14b, #c47a2a);
-  color: #26170b;
-  border-color: rgba(0, 0, 0, 0.3);
-}
-
-.btn.accent:hover {
-  background: linear-gradient(135deg, #ffca6b, #d08632);
-}
-
-.btn-icon {
-  width: 14px;
-  height: 14px;
-  margin-right: 6px;
-  fill: #c2302b; /* YouTube red tone */
-  flex-shrink: 0;
-}
-
-/* Generic page wrapper (about, privacy, posts, teachings) */
+/* =========================================================
+   GENERIC CONTENT PAGES (about, privacy, etc.)
+   ========================================================= */
 
 main.page-wrap {
   display: flex;
@@ -221,8 +267,6 @@ main.page-wrap {
   padding: 28px 24px 26px;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
 }
-
-/* Standard text on content pages */
 
 .page h1 {
   margin-top: 0;
@@ -255,32 +299,220 @@ main.page-wrap {
   color: #4a3824;
 }
 
-/* Meta + blockquote for studies */
+/* =========================================================
+   HOMEPAGE LAYOUT (NEW)
+   ========================================================= */
 
-.meta {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: #8d7455;
-  margin-bottom: 14px;
+.site-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
 }
 
-blockquote {
-  margin: 12px 0 16px;
-  padding-left: 14px;
-  border-left: 3px solid var(--accent);
-  font-style: italic;
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.hero-card {
+  max-width: 640px;
+  padding: 2.5rem 2.75rem 2.75rem;
+  border-radius: 20px;
+  background: #f5dfbd;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.hero-logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  letter-spacing: 0.18em;
+  margin: 0;
+  color: #3c2e20;
+}
+
+.hero-subtitle {
+  margin: 0.35rem 0 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.hero-body {
+  margin-bottom: 1.75rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
   color: #4a3824;
 }
 
-.inline-link {
-  color: var(--accent-dark);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
 }
 
-/* Teachings listing (old simple list – safe to keep if used anywhere) */
+/* Sections (Featured, Start Here, Beliefs) */
+.section {
+  margin-top: 3rem;
+  position: relative;
+}
 
+.section-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section text colors are LIGHT for dark background */
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light-soft);
+  opacity: 0.9;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin: 0 0 0.75rem;
+  color: var(--text-light);
+}
+
+.section-body {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  color: var(--text-light-soft);
+}
+
+.section-body-center {
+  text-align: center;
+}
+
+/* Subtle halo behind sections for readability */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem 0;
+  border-radius: 28px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 245, 225, 0.13),
+    rgba(255, 245, 225, 0)
+  );
+  filter: blur(28px);
+  z-index: -2;
+}
+
+/* =========================================================
+   FEATURED TEACHING
+   ========================================================= */
+
+.featured-card {
+  padding: 1.75rem 1.5rem 1.9rem;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.78);
+  color: var(--text-light);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.featured-text .section-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.featured-meta {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
+   START HERE – CARD GRID
+   ========================================================= */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  padding: 1.5rem 1.4rem 1.6rem;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.88);
+  color: var(--text-light);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+
+.info-card-title {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.info-card-body {
+  margin: 0 0 1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-light-soft);
+}
+
+.info-card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffd28a;
+  text-decoration: none;
+}
+
+/* =========================================================
+   WHAT WE BELIEVE STRIP
+   ========================================================= */
+
+.beliefs-strip .section-inner {
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--text-light);
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+}
+
+.beliefs-strip .section-title,
+.beliefs-strip .section-body {
+  color: var(--text-light);
+}
+
+.beliefs-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  font-size: 0.95rem;
+}
+
+.beliefs-list li + li {
+  margin-top: 0.5rem;
+}
+
+/* =========================================================
+   TEACHINGS PAGE – OVERVIEW & GRID
+   ========================================================= */
+
+/* Old simple list (safe if used anywhere) */
 .teaching-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -288,206 +520,7 @@ blockquote {
   margin-top: 22px;
 }
 
-.teaching-card {
-  background: #fdf7eb;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 14px 14px 12px;
-}
-
-.teaching-card h2 {
-  margin: 0 0 4px;
-  font-size: 17px;
-  color: #3c2e20;
-}
-
-.teaching-card a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.teaching-card a:hover {
-  color: var(--accent-dark);
-}
-
-.teaching-meta {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #8d7455;
-  margin-bottom: 6px;
-}
-
-.teaching-desc {
-  font-size: 14px;
-  color: #4a3824;
-  line-height: 1.5;
-}
-
-/* Footer */
-
-footer {
-  width: 100%;
-  padding: 12px 16px 18px;
-  text-align: center;
-  font-size: 12px;
-  color: #b8aa97;
-}
-
-footer a {
-  color: #d9c29a;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-/* ==== Teachings page extra layout (sections + grid) ==== */
-
-/* Hero card on teachings page */
-.teachings-hero {
-  margin-top: 2rem;
-}
-
-.teachings-hero .btns {
-  margin-top: 1.5rem;
-}
-
-/* Section wrapper on teachings page */
-.teachings-section {
-  margin-top: 2.5rem;
-}
-
-/* Heading + blurb */
-.teachings-section-header {
-  margin-bottom: 1rem;
-}
-
-.teachings-section-header h2 {
-  font-size: 1.1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0 0 0.25rem;
-  color: #3c2e20;
-}
-
-.teachings-section-header p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #4a3824;
-}
-
-/* Grid of teaching cards */
-.teachings-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
-}
-
-/* Individual card (reuses .teaching-card class shape/colors) */
-.teachings-grid .teaching-card {
-  background: #fdf7eb;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 14px 14px 12px;
-}
-
-.teachings-grid .teaching-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.35rem;
-  font-size: 1rem;
-  color: #3c2e20;
-}
-
-.teachings-grid .teaching-card p {
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-  font-size: 0.95rem;
-  color: #4a3824;
-}
-
-/* Meta line under each card */
-.teachings-grid .teaching-meta {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #8d7455;
-}
-
-/* Closing section on teachings page */
-.teachings-section-footer {
-  margin-bottom: 3rem;
-}
-
-/* Responsive */
-
-@media (max-width: 640px) {
-  body > header {
-    padding: 10px 14px;
-  }
-
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .wrap {
-    padding-top: 32px;
-  }
-
-  .card {
-    padding: 22px 18px 20px;
-  }
-
-  .logo {
-    width: 90px;
-    height: 90px;
-  }
-
-  main.page-wrap {
-    padding-top: 32px;
-  }
-
-  .btns {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* Foundations section layout */
-#foundations {
-  margin: 40px 0;
-  padding: 24px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-#foundations h2 {
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-}
-
-#foundations .section-intro {
-  max-width: 720px;
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: #cbb8a1;
-  margin-bottom: 24px;
-}
-
-/* Teaching grid */
-.teaching-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-/* Teaching card */
+/* Teaching card (base style) */
 .teaching-card {
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -504,271 +537,24 @@ footer a {
   margin-bottom: 6px;
 }
 
-.teaching-card h3 {
+.teaching-card h3,
+.teaching-card h2 {
   font-size: 1.1rem;
   margin: 0 0 8px;
+  color: #f8e6cc;
 }
 
 .teaching-card p {
   font-size: 0.95rem;
   line-height: 1.55;
   margin: 0 0 8px;
+  color: #f2e2c7;
 }
 
-/* Responsive adjustments for Foundations grid */
-@media (max-width: 1024px) {
-  .teaching-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .teaching-grid {
-    grid-template-columns: 1fr;
-  }
-
-  #foundations {
-    padding: 16px 0;
-  }
-}
-
-/* Layout helpers */
-.site-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem 4rem;
-}
-
-/* Sections */
-.section {
-  margin-top: 3rem;
-}
-
-.section-inner {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.section-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.7;
-}
-
-.section-title {
-  font-size: 1.6rem;
-  margin: 0 0 0.75rem;
-  text-align: left;
-}
-
-.section-body {
-  font-size: 0.98rem;
-  line-height: 1.6;
-  margin: 0 0 1.5rem;
-}
-
-.section-body-center {
-  text-align: center;
-}
-
-/* Hero tweaks */
-.hero {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.hero-card {
-  max-width: 640px;
-  padding: 2.5rem 2.75rem 2.75rem;
-  border-radius: 20px;
-  background: #f5dfbd; /* keep close to your existing beige */
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-  text-align: center;
-}
-
-.hero-logo {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-.hero-title {
-  font-size: 1.8rem;
-  letter-spacing: 0.18em;
-  margin: 0;
-}
-
-.hero-subtitle {
-  margin: 0.35rem 0 1.25rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  opacity: 0.7;
-}
-
-.hero-body {
-  margin-bottom: 1.75rem;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.55rem 1.2rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border: 1px solid transparent;
-  cursor: pointer;
-}
-
-.btn.accent {
-  background: #e69a32;
-  color: #26160c;
-}
-
-.btn.subtle {
-  background: rgba(255, 255, 255, 0.7);
-  color: #3c2717;
-  border-color: rgba(0, 0, 0, 0.04);
-}
-
-/* Featured teaching */
-.featured-card {
-  padding: 1.75rem 1.5rem 1.9rem;
-  border-radius: 18px;
-  background: rgba(0, 0, 0, 0.38);
-  color: #f8e6cc;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
-}
-
-.featured-text .section-title {
-  font-size: 1.4rem;
-}
-
-.featured-meta {
-  font-size: 0.8rem;
-  opacity: 0.75;
-  margin-bottom: 1rem;
-}
-
-/* Start here cards */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+/* Teachings hero (if used) */
+.teachings-hero {
   margin-top: 2rem;
 }
 
-.info-card {
-  padding: 1.5rem 1.4rem 1.6rem;
-  border-radius: 16px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #f9e7cd;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
-}
-
-.info-card-title {
-  margin: 0 0 0.6rem;
-  font-size: 1.1rem;
-}
-
-.info-card-body {
-  margin: 0 0 1rem;
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-.info-card-link {
-  font-size: 0.9rem;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Beliefs strip */
-.beliefs-strip {
-  margin-top: 3.5rem;
-}
-
-.beliefs-strip .section-inner {
-  padding: 2rem 1.5rem;
-  border-radius: 18px;
-  background: rgba(0, 0, 0, 0.35);
-  color: #f9e7cd;
-  text-align: center;
-}
-
-.beliefs-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
-  font-size: 0.95rem;
-}
-
-.beliefs-list li + li {
-  margin-top: 0.5rem;
-}
-
-/* Footer */
-.site-footer {
-  margin-top: 3rem;
-  padding: 1.75rem 1rem 2.5rem;
-  text-align: center;
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
-.footer-links a {
-  text-decoration: none;
-}
-
-/* === SECTION VISUAL BACKPLATES (helps readability) === */
-
-.section {
-  position: relative;
-  padding: 3rem 1rem;
-}
-
-.section::before {
-  /* subtle light halo */
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 245, 225, 0.12),
-    rgba(255, 245, 225, 0.03)
-  );
-  filter: blur(24px);
-  z-index: -1;
-}
-
-/* Ensures card-grid spacing doesn’t “bleed” into gradient */
-.start-here .section-inner,
-.featured-teaching .section-inner,
-.beliefs-strip .section-inner {
-  position: relative;
-  background: rgba(0, 0, 0, 0.22); /* soft translucent layer */
-  padding: 2.2rem 1.8rem;
-  border-radius: 24px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.55);
-}
-
-
-
-
+.teachings-hero .btns {
+  margin-top: 1
